@@ -4,7 +4,7 @@ import { ChevronDown, Menu, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 
 function HeaderLayout() {
-    const [open , setOpen] = useState<boolean>(false)
+    const [open, setOpen] = useState<boolean>(false)
     return (
         <>
             <div className="py-10 absolute z-40 w-full text-white md:px-20 px-10 flex justify-between items-center" >
@@ -35,24 +35,23 @@ function HeaderLayout() {
                         </div>
                     </div>
                     <div onClick={() => setOpen(true)} className="lg:hidden" >
-                        <Menu size={34}/>
+                        <Menu size={34} />
                     </div>
                 </div>
                 <Sidebar open={open} setOpen={setOpen}>
-                    <div className="w-50 p-2" >
-
-                    <header className="Gilroy-Bold text-lg flex w-full items-center justify-center p-5" >
-                        Panto
-                    </header>
-                    <div className="flex items-center text-[#E58411] Gilroy-Bold " >
-                        other menu
-                    </div>
-                    <div className="flex flex-col gap-2 mt-2" >
-                        <div className="rounded-xl flex items-center bg-zinc-200 justify-between w-full bg-[] p-3" >Furniture</div>
-                        <div className="rounded-xl flex items-center  justify-between w-full bg-[] p-3" >Shop</div>
-                        <div className="rounded-xl flex items-center  justify-between w-full bg-[] p-3" >About us</div>
-                        <div className="rounded-xl flex items-center  justify-between w-full bg-[] p-3" >Contact</div>
-                    </div>
+                    <div className="w-50 p-2 lg:hidden" >
+                        <header className="Gilroy-Bold text-lg flex w-full items-center justify-center p-5" >
+                            Panto
+                        </header>
+                        <div className="flex items-center text-[#E58411] Gilroy-Bold " >
+                            other menu
+                        </div>
+                        <div className="flex flex-col gap-2 mt-2" >
+                            <div className="rounded-xl flex items-center bg-zinc-200 justify-between w-full bg-[] p-3" >Furniture</div>
+                            <div className="rounded-xl flex items-center  justify-between w-full bg-[] p-3" >Shop</div>
+                            <div className="rounded-xl flex items-center  justify-between w-full bg-[] p-3" >About us</div>
+                            <div className="rounded-xl flex items-center  justify-between w-full bg-[] p-3" >Contact</div>
+                        </div>
                     </div>
                 </Sidebar>
             </div>
