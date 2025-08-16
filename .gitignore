@@ -1,8 +1,12 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
+# -----------------------------
+# Node & Package Managers
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,32 +14,88 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# -----------------------------
+# Next.js
+# -----------------------------
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
 
-# next.js
-/.next/
-/out/
+# -----------------------------
+# Turborepo
+# -----------------------------
+.turbo/
+dist/
 
-# production
-/build
+# -----------------------------
+# Prisma
+# -----------------------------
+/prisma/*.db
+/prisma/*.db-journal
+/prisma/migrations/dev.db-journal
 
-# misc
-.DS_Store
-*.pem
+# -----------------------------
+# Env & Config
+# -----------------------------
+.env*
+!.env.example
 
-# debug
+# -----------------------------
+# Logs & Debug
+# -----------------------------
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+lerna-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# -----------------------------
+# System & Misc
+# -----------------------------
+.DS_Store
+*.pem
+*.swp
+*.swo
+*.tmp
 
-# vercel
-.vercel
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.iml
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# -----------------------------
+# Coverage / Testing
+# -----------------------------
+coverage/
+*.lcov
+
+# -----------------------------
+# Docker
+# -----------------------------
+.docker/
+docker-compose.override.yml
+.dockerignore
+
+# -----------------------------
+# Vercel / Deployment
+# -----------------------------
+.vercel/
+.vercel_build_output/
+
+# -----------------------------
+# Storybook (optional)
+# -----------------------------
+.storybook-out/
+storybook-static/
+
+# -----------------------------
+# Local caches
+# -----------------------------
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
